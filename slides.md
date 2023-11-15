@@ -143,7 +143,7 @@ level: 2
 transition: slide-up
 level: 2
 layout: image-right
-image: ./image.png
+image: https://s1.imagehub.cc/images/2023/11/16/4a3be7204e275f649e4d7b7c1f4f94b1.png
 ---
 
 # Project Work Plan
