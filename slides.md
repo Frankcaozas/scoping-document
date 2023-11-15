@@ -98,7 +98,7 @@ level: 2
 
 # Scope of the Project 
 ## Aim
-Develop an algorithm to efficiently solve large-scale production scheduling problems with many machines and parts which need to consider the priority of the parts. 
+Develop an algorithm to efficiently solve large-scale production scheduling problems with many machines and parts which needs to consider the priority of the parts. 
 
 
 ## Ojectives
@@ -116,6 +116,8 @@ Identify limitations of existing solution approaches for large instances
 
 
 ---
+transition: slide-up
+level: 2
 layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
@@ -127,9 +129,53 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 
 
 - lack of research focus on large-scale scheduling problems
-- limitation of widely used method like metaheuristics ()
--
+- limitation of widely used method like metaheuristics (Only partly optimal solutions can be found, but global optimal solutions cannot be found)
 
-#
+
+
+---
+transition: slide-up
+level: 2
+---
+
+# Literature Review
+## Methods
+- Heuristics
+  -  Heuristics
+  - Metaheuristic 
+  - Combined Metaheuristics
+- Machine learning
+- Constraint programming
+
+---
+transition: slide-up
+level: 2
+layout: image-right
+image: ./image.png
+---
+
+# Project Work Plan
+1. Further research and Literature Review (November 2023 - January 2024) 
+
+2. Development of Mathematical Model (November 2023 - February 2024) 
+
+3. Algorithm Development (January 2024 - March 2024) 
+
+4. Testing and Analysis (March 2024 - April 2024) 
+
+5. Documentation of the algorithm and results (February 2024 - April 2024) 
+
+
+---
+layout: center
+class: text-center
+---
+
+# END
+
+thanks for listening
+
+
+
 
 
