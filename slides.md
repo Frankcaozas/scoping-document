@@ -39,7 +39,7 @@ transition: fade-out
 
 # Backgorund 
 <div>
-this project focuses on a provider of rail transit maintenance equipment, The company produces 38 kinds of large-scale rail transit operation and maintenance vehicles, each model involves more than 10,000 structural parts, and the materials, priorities, processes and other requirements of different parts are different. In the long-term implementation process of manual production scheduling in its structural branch plant, problems such as low efficiency and poor accuracy are gradually exposed
+This project focuses on a provider of rail transit maintenance equipment, The company produces 38 kinds of large-scale rail transit operation and maintenance vehicles, each model involves more than 10,000 structural parts, and the materials, priorities, processes and other requirements of different parts are different. In the long-term implementation process of manual production scheduling in its structural branch plant, problems such as low efficiency and poor accuracy are gradually exposed
   <img
   class="absolute  -right-7 w-80 "
   src="https://img2.imgtp.com/2024/05/03/hr69HxmA.png"
@@ -49,7 +49,7 @@ this project focuses on a provider of rail transit maintenance equipment, The co
 
 
 
-- 📝 **importance of efficient scheduling** 
+- **importance of efficient scheduling** 
   - reduce production times, 
   - minimize costs, 
   - increase overall factory efficiency
@@ -73,7 +73,7 @@ level: 2
 To tackle the challenges of large-scale parallel machine scheduling, particularly in high-end equipment manufacturing industries, this project proposes the design of an scheduling algorithm. The mathematical model underpinning this algorithm is aimed at optimizing several critical aspects of production processes: priority handling, material type management, and the processing numbers of parts. The objective is to minimize the total completion time of scheduled jobs while optimizing the allocation and utilization of resources.
 </h5>
 
-# Assuptions made
+# Assuptions 
 - Homogeneous parallel machine problem
 - Single Operation Per Machine
 - Consistent Machine Operation
@@ -97,8 +97,9 @@ level: 2
   w-100
   src='https://img2.imgtp.com/2024/05/03/d4dFveZm.png'
 />
-<img 
-  h-50
+<img
+  m-t-15
+  h-35
   src='https://img2.imgtp.com/2024/05/03/YILQcgjP.png'
 />
 
@@ -140,7 +141,7 @@ level: 2
 ### Implementation of optimization algorithm
 Flow char of general algorithm
 <div w-200 flex justify-center>
- <img  w-80 src='https://img2.imgtp.com/2024/05/03/0ENcQnqt.png'/>
+ <img  w-55 src='https://img2.imgtp.com/2024/05/03/WF6dtPph.png'/>
 </div>
 ---
 transition: slide-up
@@ -154,11 +155,11 @@ $\ x_{n+1}=r×x_{n}×(1-x_n)$
 <div flex>
   <div w-110>
     20 job with random processing time between 1 and 100 on 5 machines
-    <img h-60 src='https://img2.imgtp.com/2024/05/03/rKtguE7z.png' />
+    <img h-60 src='https://img2.imgtp.com/2024/05/03/yOo6c6u7.png' />
   </div>
   <div w-110 m-x-2>
     30 job with random processing time between 1 and 100 on 15 machines
-    <img h-60 src='https://img2.imgtp.com/2024/05/03/1xm8swkp.png' />
+    <img h-60 src='https://img2.imgtp.com/2024/05/03/tFcpoZ9P.png' />
   </div>
 </div>
 
@@ -170,7 +171,7 @@ level: 2
 ### Implementation of optimization algorithm
 flow chart of simulate annealing 
 <div w-200  flex justify-center>
-    <img h-105 src='https://img2.imgtp.com/2024/05/03/NT82wT6p.png' />
+    <img h-105 src='https://img2.imgtp.com/2024/05/03/qrjodmJe.png' />
   </div>
 ---
 transition: slide-up
@@ -220,8 +221,8 @@ level: 2
 ---
 
 ### Implementation of optimization algorithm
-Gantt chart of schedule results of simulate annealing
-<p >number at top: id of the part, number at the middle: priority, and the number in the bottom represents the part processing quantity. </p>
+#### Gantt chart of schedule results of simulate annealing
+<p >top: id of the part, middle: priority, bottom: processing quantity </p>
 <div w-200  flex justify-center>
     <img h-90 src='https://img2.imgtp.com/2024/05/03/8gulEpss.png' />
   </div>
