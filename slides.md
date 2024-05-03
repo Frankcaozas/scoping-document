@@ -1,85 +1,64 @@
 ---
+# try also 'default' to start simple
 theme: seriph
-background: https://source.unsplash.com/collection/94734566/1920x1080
-class: text-center
-highlighter: shiki
-lineNumbers: false
+# random image from a curated Unsplash collection by Anthony
+# like them? see https://unsplash.com/collections/94734566/slidev
+background: https://images.unsplash.com/photo-1619976553580-0d3ffc09fb86?q=80&w=3872&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+# some information about your slides, markdown enabled
+title: Large-scale production in complex equipment manufacturing
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
 
   Learn more at [Sli.dev](https://sli.dev)
+# apply any unocss classes to the current slide
+class: text-center
+# https://sli.dev/custom/highlighters.html
+highlighter: shiki
+# https://sli.dev/guide/drawing
 drawings:
   persist: false
+# slide transition: https://sli.dev/guide/animations#slide-transitions
 transition: slide-left
-title: Large-scale production in complex equipment manufacturing
+# enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
 mdc: true
 ---
 
-
-
 # Large-scale production in complex equipment manufacturing
 
-Ziyang Shao
-
-<!-- <div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div> -->
-
-<!-- <div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div> -->
+### Ziynag Shao
+### Supervisor: Peng Guo
 
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
-
 ---
 transition: fade-out
 ---
 
-# Scope of the Project 
-## Background
-or reasons for doing this project
-
--  **importance of scheduling** - for manufacture industry and companies
--  **gap between theory and practice** - 
--  **complexity increased** - with different constrains and larger scale
-
-
-<br>
-<br>
+# Backgorund 
+<div>
+this project focuses on a provider of rail transit maintenance equipment, The company produces 38 kinds of large-scale rail transit operation and maintenance vehicles, each model involves more than 10,000 structural parts, and the materials, priorities, processes and other requirements of different parts are different. In the long-term implementation process of manual production scheduling in its structural branch plant, problems such as low efficiency and poor accuracy are gradually exposed
+  <img
+  class="absolute  -right-7 w-80 "
+  src="https://img2.imgtp.com/2024/05/03/hr69HxmA.png"
+  alt=""
+  />
+</div>
 
 
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
 
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
+- 📝 **importance of efficient scheduling** 
+  - reduce production times, 
+  - minimize costs, 
+  - increase overall factory efficiency
+  
+- **Limitation of current solutions** 
+  - traditional heuristic algorithms alostuggle to handle complex multi-objective optimization
+  - only partly optimal solutions can be found in some situation
 
-<!--
-Here is another comment.
--->
+
 
 
 
@@ -88,40 +67,20 @@ transition: slide-up
 level: 2
 ---
 
-# Scope of the Project 
-## Aim
-Develop an algorithm to efficiently solve large-scale production scheduling problems with many machines and parts which needs to consider the priority of the parts. 
+# Aim
+
+<h5>Design a scheduling algorithm and build up its mathematic model to efficiently solve large scale parallel machine scheduling problems.
+To tackle the challenges of large-scale parallel machine scheduling, particularly in high-end equipment manufacturing industries, this project proposes the design of an scheduling algorithm. The mathematical model underpinning this algorithm is aimed at optimizing several critical aspects of production processes: priority handling, material type management, and the processing numbers of parts. The objective is to minimize the total completion time of scheduled jobs while optimizing the allocation and utilization of resources.
+</h5>
+
+# Assuptions made
+- Homogeneous parallel machine problem
+- Single Operation Per Machine
+- Consistent Machine Operation
+- Negligible Transport Time
+- Exclusion of Assembly Time
 
 
-## Ojectives
-- Conduct a literature review on production scheduling methods, particularly for large problems 
-
-Identify limitations of existing solution approaches for large instances 
-
-- Develop a mathematical model to represent the scheduling problem 
-
-- Find an algorithm to find near-optimal solutions  
-
-- Implement the algorithm and test on benchmark instances 
-
-- Analyze the algorithm's performance and scalability 
-
-
----
-transition: slide-up
-level: 2
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
----
-
-# Literature Review
-## Problems facing
-
-- complexity increased & gap between theory and practice（Same as mentioned in the background）
-
-
-- lack of research focus on large-scale scheduling problems
-- limitation of widely used method like metaheuristics (Only partly optimal solutions can be found, but global optimal solutions cannot be found)
 
 
 
@@ -130,33 +89,187 @@ transition: slide-up
 level: 2
 ---
 
-# Literature Review
-## Methods
-- Heuristics
-  -  Heuristics
-  - Metaheuristic 
-  - Combined Metaheuristics
-- Machine learning
-- Constraint programming
+# Mathmatic model
+### Stage1 model: to minimise the total completion time using simulated annealing
+
+<div w-200 flex>
+<img 
+  w-100
+  src='https://img2.imgtp.com/2024/05/03/d4dFveZm.png'
+/>
+<img 
+  h-50
+  src='https://img2.imgtp.com/2024/05/03/YILQcgjP.png'
+/>
+
+</div>
+
 
 ---
 transition: slide-up
 level: 2
-layout: image-right
-image: https://s1.imagehub.cc/images/2023/11/16/4a3be7204e275f649e4d7b7c1f4f94b1.png
 ---
 
-# Project Work Plan
-1. Further research and Literature Review (November 2023 - January 2024) 
+# Mathmatic model
+### Stage 2 model: 3 objectives
+1. Minimize the number of material changes during the processing of parts.
+2. Prioritize the processing of parts with a higher priority
+3. Prioritize the processing of parts with higher priority within the same project
+<div w-200 flex>
+<img 
+  w-98
+  src='https://img2.imgtp.com/2024/05/03/1QU91Djw.png'
+/>
+<div>
+<img 
+  h-62
+  src='https://img2.imgtp.com/2024/05/03/hZ4E0BIi.png'
+/>
+<img 
+  h-12
+  src='https://img2.imgtp.com/2024/05/03/RsjcunG9.png'
+/>
+</div>
+</div>
 
-2. Development of Mathematical Model (November 2023 - February 2024) 
+---
+transition: slide-up
+level: 2
 
-3. Algorithm Development (January 2024 - March 2024) 
+---
+### Implementation of optimization algorithm
+Flow char of general algorithm
+<div w-200 flex justify-center>
+ <img  w-80 src='https://img2.imgtp.com/2024/05/03/0ENcQnqt.png'/>
+</div>
+---
+transition: slide-up
+level: 2
 
-4. Testing and Analysis (March 2024 - April 2024) 
+---
+### Implementation of optimization algorithm
+simulate annealing with chaotic operator
 
-5. Documentation of the algorithm and results (February 2024 - April 2024) 
+$\ x_{n+1}=r×x_{n}×(1-x_n)$
+<div flex>
+  <div w-110>
+    20 job with random processing time between 1 and 100 on 5 machines
+    <img h-60 src='https://img2.imgtp.com/2024/05/03/rKtguE7z.png' />
+  </div>
+  <div w-110 m-x-2>
+    30 job with random processing time between 1 and 100 on 15 machines
+    <img h-60 src='https://img2.imgtp.com/2024/05/03/1xm8swkp.png' />
+  </div>
+</div>
 
+---
+transition: slide-up
+level: 2
+
+---
+### Implementation of optimization algorithm
+flow chart of simulate annealing 
+<div w-200  flex justify-center>
+    <img h-105 src='https://img2.imgtp.com/2024/05/03/NT82wT6p.png' />
+  </div>
+---
+transition: slide-up
+level: 2
+
+---
+
+#### Implementation of optimization algorithm
+Code of simulate annealing with chaotic operator
+
+```py 
+def simulated_annealing(initial_temp, cooling_rate, max_iterations):
+    current_solution = np.random.randint(0, num_machines, size=num_tasks)
+    current_cmax, _ = calculate_cmax_and_schedule(current_solution)
+    best_solution = current_solution.copy()
+    best_cmax = current_cmax
+    chaotic_var = np.random.rand()
+    for i in range(max_iterations):
+        temp = initial_temp * (cooling_rate ** i)
+        chaotic_var = logistic_map(chaotic_var)
+        new_solution = generate_new_solution(current_solution, chaotic_var)
+        new_cmax, _ = calculate_cmax_and_schedule(new_solution)
+        energy_diff = new_cmax - current_cmax
+        if energy_diff < 0 or np.exp(-energy_diff / temp) > np.random.rand():
+            current_solution = new_solution.copy()
+            current_cmax = new_cmax
+
+            if new_cmax < best_cmax:
+                best_solution = new_solution.copy()
+                best_cmax = new_cmax
+    best_cmax, best_schedule = calculate_cmax_and_schedule(best_solution)
+    return best_solution, best_cmax, best_schedule
+```
+
+---
+level: 2
+---
+
+### Implementation of optimization algorithm
+data used for test
+<div w-200  flex justify-center>
+    <img h-170 src='https://img2.imgtp.com/2024/05/03/rFg39LX7.png' />
+  </div>
+
+---
+level: 2
+---
+
+### Implementation of optimization algorithm
+Gantt chart of schedule results of simulate annealing
+<p >number at top: id of the part, number at the middle: priority, and the number in the bottom represents the part processing quantity. </p>
+<div w-200  flex justify-center>
+    <img h-90 src='https://img2.imgtp.com/2024/05/03/8gulEpss.png' />
+  </div>
+
+
+---
+
+### Implementation of optimization algorithm
+code of local greedy search
+<div  flex justify-center>
+    <img h-110 src='https://img2.imgtp.com/2024/05/03/yNRHL0nT.png' />
+</div>
+
+
+---
+class: px-20
+---
+
+### Implementation of optimization algorithm
+flow chart of random neighborhood search
+<div  flex justify-center>
+    <img h-105 src='https://img2.imgtp.com/2024/05/03/Jf2CvyTe.png' />
+</div>
+
+
+
+---
+
+### Implementation of optimization algorithm
+results of second stage optimization
+<div  flex justify-center>
+    <img h-100 src='https://img2.imgtp.com/2024/05/03/JDBucjpD.png' />
+</div>
+
+---
+
+# Summary
+
+#### Key Achievements
+- Development of a two-stage optimization algorithm and reach the optimization requirement
+- Integration of chaotic simulated annealing for improved convergence
+- Implementation of local greedy and random neighborhood searches
+- Performance evaluation with Gantt charts
+
+#### Future Work
+- Incorporation of dynamic scheduling capabilities
+- Development of a user-friendly software interface
+- Make the algorithm more scaleable to suit different situations
 
 ---
 layout: center
@@ -166,8 +279,6 @@ class: text-center
 # END
 
 thanks for listening
-
-
 
 
 
