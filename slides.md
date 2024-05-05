@@ -138,7 +138,7 @@ transition: slide-up
 level: 2
 
 ---
-### Implementation of optimization algorithm
+### Implementation of optimization algorithm part 
 Flow char of general algorithm
 <div w-200 flex justify-center>
  <img  w-55 src='https://img2.imgtp.com/2024/05/03/WF6dtPph.png'/>
@@ -148,7 +148,7 @@ transition: slide-up
 level: 2
 
 ---
-### Implementation of optimization algorithm
+### Implementation of optimization algorithm part 
 simulate annealing with chaotic operator
 
 $\ x_{n+1}=r×x_{n}×(1-x_n)$
@@ -168,7 +168,7 @@ transition: slide-up
 level: 2
 
 ---
-### Implementation of optimization algorithm
+### Implementation of optimization algorithm part 
 flow chart of simulate annealing 
 <div w-200  flex justify-center>
     <img h-105 src='https://img2.imgtp.com/2024/05/03/qrjodmJe.png' />
@@ -179,7 +179,7 @@ level: 2
 
 ---
 
-#### Implementation of optimization algorithm
+#### Implementation of optimization algorithm part 
 Code of simulate annealing with chaotic operator
 
 ```py 
@@ -210,7 +210,7 @@ def simulated_annealing(initial_temp, cooling_rate, max_iterations):
 level: 2
 ---
 
-### Implementation of optimization algorithm
+### Implementation of optimization algorithm 
 data used for test
 <div w-200  flex justify-center>
     <img h-170 src='https://img2.imgtp.com/2024/05/03/rFg39LX7.png' />
@@ -220,7 +220,7 @@ data used for test
 level: 2
 ---
 
-### Implementation of optimization algorithm
+### Implementation of optimization algorithm part 
 #### Gantt chart of schedule results of simulate annealing
 <p >top: id of the part, middle: priority, bottom: processing quantity </p>
 <div w-200  flex justify-center>
@@ -230,10 +230,20 @@ level: 2
 
 ---
 
-### Implementation of optimization algorithm
-code of local greedy search
-<div  flex justify-center>
-    <img h-110 src='https://img2.imgtp.com/2024/05/03/yNRHL0nT.png' />
+
+### Implementation of optimization algorithm part 
+
+<div grid="~ cols-2 gap-2" m="t-2">
+  <div>
+  preprocess of data to reduce solving time and computational load
+  <img m-t-10 border="rounded" src="https://img2.imgtp.com/2024/05/05/2aMSxZBR.png" alt="">
+  <img m-t-10 border="rounded" src="https://img2.imgtp.com/2024/05/05/zKfyqgzS.png" alt="">
+  </div>
+  <div flex-row justify-center>
+  code of local greedy search
+      <img h-110 src='https://img2.imgtp.com/2024/05/03/yNRHL0nT.png' />
+            
+  </div>
 </div>
 
 
@@ -241,17 +251,20 @@ code of local greedy search
 class: px-20
 ---
 
-### Implementation of optimization algorithm
-flow chart of random neighborhood search
-<div  flex justify-center>
-    <img h-105 src='https://img2.imgtp.com/2024/05/03/Jf2CvyTe.png' />
+<div  flex justify-center gap-10>
+    <div> 
+      <h7>implementation of random neighbor search</h7>
+      <img h-120 src='https://img2.imgtp.com/2024/05/06/EDNtfWzX.png'/>
+    </div>
+    <img h-130 src='https://img2.imgtp.com/2024/05/03/Jf2CvyTe.png' />
+  
 </div>
 
 
 
 ---
 
-### Implementation of optimization algorithm
+
 results of second stage optimization
 <div  flex justify-center>
     <img h-100 src='https://img2.imgtp.com/2024/05/03/JDBucjpD.png' />
