@@ -39,7 +39,7 @@ transition: fade-out
 
 # Backgorund 
 <div>
-This project focuses on a provider of rail transit maintenance equipment, The company produces 38 kinds of large-scale rail transit operation and maintenance vehicles, each model involves more than 10,000 structural parts, and the materials, priorities, processes and other requirements of different parts are different. In the long-term implementation process of manual production scheduling in its structural branch plant, problems such as low efficiency and poor accuracy are gradually exposed
+This project focuses on a provider of <b>rail transit maintenance equipment provider</b>, the company produces 38 kinds of equipments, each equipment involves more than 10,000 structural parts. Materials, priorities, process quantities and other parameters of different parts are different. The structural branch plant's long-term manual production scheduling implementation process gradually exposes issues like low efficiency and poor accuracy.
   <img
   class="absolute  -right-7 w-80 "
   src="https://img2.imgtp.com/2024/05/03/hr69HxmA.png"
@@ -50,8 +50,8 @@ This project focuses on a provider of rail transit maintenance equipment, The co
 
 
 - **importance of efficient scheduling** 
-  - reduce production times, 
-  - minimize costs, 
+  - reduce production completion times
+  - minimize costs
   - increase overall factory efficiency
   
 - **Limitation of current solutions** 
@@ -68,17 +68,19 @@ level: 2
 ---
 
 # Aim
-
-<h5>Design a scheduling algorithm and build up its mathematic model to efficiently solve large scale parallel machine scheduling problems.
-To tackle the challenges of large-scale parallel machine scheduling, particularly in high-end equipment manufacturing industries, this project proposes the design of an scheduling algorithm. The mathematical model underpinning this algorithm is aimed at optimizing several critical aspects of production processes: priority handling, material type management, and the processing numbers of parts. The objective is to minimize the total completion time of scheduled jobs while optimizing the allocation and utilization of resources.
+- **Company's requirement**:
+  - Reduce compeletion time
+  - Reduce material switching
+  - Part with higher priority and processing quntity in the front
+<h5>Design a scheduling algorithm and build up its mathematic model to efficiently solve large scale parallel machine scheduling problem.
 </h5>
 
 # Assuptions 
 - Homogeneous parallel machine problem
-- Single Operation Per Machine
-- Consistent Machine Operation
-- Negligible Transport Time
-- Exclusion of Assembly Time
+- Single operation per Machine
+- Consistent machine operation
+- Ingore transport time and exclusion of assembly time
+
 
 
 
@@ -169,9 +171,9 @@ level: 2
 
 ---
 ### Implementation of optimization algorithm part 
-flow chart of simulate annealing 
+flow chart of simulated annealing 
 <div w-200  flex justify-center>
-    <img h-105 src='https://img2.imgtp.com/2024/05/03/qrjodmJe.png' />
+    <img h-105 src='https://img2.imgtp.com/2024/05/06/om4WKdmV.png' />
   </div>
 ---
 transition: slide-up
@@ -276,9 +278,9 @@ results of second stage optimization
 
 #### Key Achievements
 - Development of a two-stage optimization algorithm and reach the optimization requirement
-- Integration of chaotic simulated annealing for improved convergence
+- Integration of chaotic simulated annealing for improved convergence speed and stability
 - Implementation of local greedy and random neighborhood searches
-- Performance evaluation with Gantt charts
+- Performance evaluation with Gantt charts and 
 
 #### Future Work
 - Incorporation of dynamic scheduling capabilities
