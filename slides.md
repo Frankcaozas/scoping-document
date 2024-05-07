@@ -39,7 +39,7 @@ transition: fade-out
 
 # Backgorund 
 <div>
-This project focuses on a provider of <b>rail transit maintenance equipment provider</b>, the company produces 38 kinds of equipments, each equipment involves more than 10,000 structural parts. Materials, priorities, process quantities and other parameters of different parts are different. The structural branch plant's long-term manual production scheduling implementation process gradually exposes issues like low efficiency and poor accuracy.
+This project focuses on a provider of <b>rail transit maintenance equipment provider</b>, the company produces 38 kinds of equipments, each equipment involves more than 10,000 structural parts. The parts have different materials, priorities, processing quantities and other parameters. The company's long-term manual production scheduling implementation process gradually exposes issues like <b>low efficiency and poor accuracy</b>.
   <img
   class="absolute  -right-7 w-80 "
   src="https://img2.imgtp.com/2024/05/03/hr69HxmA.png"
@@ -55,7 +55,7 @@ This project focuses on a provider of <b>rail transit maintenance equipment prov
   - increase overall factory efficiency
   
 - **Limitation of current solutions** 
-  - traditional heuristic algorithms alostuggle to handle complex multi-objective optimization
+  - traditional heuristic algorithms stuggle to handle complex multi-objective optimization
   - only partly optimal solutions can be found in some situation
 
 
@@ -140,7 +140,7 @@ transition: slide-up
 level: 2
 
 ---
-### Implementation of optimization algorithm part 
+### Implementation of optimization algorithm 
 Flow char of general algorithm
 <div w-200 flex justify-center>
  <img  w-55 src='https://img2.imgtp.com/2024/05/03/WF6dtPph.png'/>
@@ -150,7 +150,7 @@ transition: slide-up
 level: 2
 
 ---
-### Implementation of optimization algorithm part 
+### Implementation of optimization algorithm 
 simulate annealing with chaotic operator
 
 $\ x_{n+1}=r×x_{n}×(1-x_n)$
@@ -170,10 +170,10 @@ transition: slide-up
 level: 2
 
 ---
-### Implementation of optimization algorithm part 
+### Implementation of optimization algorithm 
 flow chart of simulated annealing 
 <div w-200  flex justify-center>
-    <img h-105 src='https://img2.imgtp.com/2024/05/06/om4WKdmV.png' />
+    <img h-105 src='https://img2.imgtp.com/2024/05/07/Q5vUm4Or.png' />
   </div>
 ---
 transition: slide-up
@@ -181,8 +181,8 @@ level: 2
 
 ---
 
-#### Implementation of optimization algorithm part 
-Code of simulate annealing with chaotic operator
+#### Implementation of optimization algorithm 
+Code of simulated annealing with chaotic operator
 
 ```py 
 def simulated_annealing(initial_temp, cooling_rate, max_iterations):
@@ -222,7 +222,7 @@ data used for test
 level: 2
 ---
 
-### Implementation of optimization algorithm part 
+### Implementation of optimization algorithm 
 #### Gantt chart of schedule results of simulate annealing
 <p >top: id of the part, middle: priority, bottom: processing quantity </p>
 <div w-200  flex justify-center>
@@ -233,7 +233,7 @@ level: 2
 ---
 
 
-### Implementation of optimization algorithm part 
+### Implementation of optimization algorithm 
 
 <div grid="~ cols-2 gap-2" m="t-2">
   <div>
@@ -279,13 +279,20 @@ results of second stage optimization
 #### Key Achievements
 - Development of a two-stage optimization algorithm and reach the optimization requirement
 - Integration of chaotic simulated annealing for improved convergence speed and stability
-- Implementation of local greedy and random neighborhood searches
-- Performance evaluation with Gantt charts and 
+- Implementation of local greedy search and random neighborhood search
+- Performance evaluation with Gantt charts 
 
 #### Future Work
 - Incorporation of dynamic scheduling capabilities
 - Development of a user-friendly software interface
 - Make the algorithm more scaleable to suit different situations
+
+<div class="abs-br m-6 flex gap-2">
+  <a href="https://github.com/Frankcaozas/individual_project" target="_blank" alt="GitHub" title="Open in GitHub"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-github />
+  </a>
+</div>
 
 ---
 layout: center
